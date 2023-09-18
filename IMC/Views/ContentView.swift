@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack {
+            BackgroundView()
+            
+            VStack {
+                TitleView(title: "Cálculo do IMC", desc:"Descubra seu índice de Massa Corporal")
+                
+                MainView()
+                
+                Spacer()
+            }
         }
-        .padding()
     }
 }
 
